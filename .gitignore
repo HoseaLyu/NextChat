@@ -49,3 +49,7 @@ masks.json
 
 # mcp config
 app/mcp/mcp_config.json
+
+.yarn/
+.yarnrc.yml
+yarn.lock
