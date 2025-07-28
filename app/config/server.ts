@@ -13,7 +13,6 @@ declare global {
       BASE_URL?: string;
       OPENAI_ORG_ID?: string; // openai only
 
-      VERCEL?: string;
       BUILD_MODE?: "standalone" | "export";
       BUILD_APP?: string; // is building desktop app
 
@@ -255,15 +254,11 @@ export const getServerSideConfig = () => {
     ai302Url: process.env.AI302_URL,
     ai302ApiKey: getApiKey(process.env.AI302_API_KEY),
 
-    gtmId: process.env.GTM_ID,
-    gaId: process.env.GA_ID || DEFAULT_GA_ID,
-
     needCode: ACCESS_CODES.size > 0,
     code: process.env.CODE,
     codes: ACCESS_CODES,
 
     proxyUrl: process.env.PROXY_URL,
-    isVercel: !!process.env.VERCEL,
 
     hideUserApiKey: !!process.env.HIDE_USER_API_KEY,
     disableGPT4,
